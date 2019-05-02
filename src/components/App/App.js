@@ -16,6 +16,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import Goals from '../Goals/Goals';
+import EditGoals from '../Goals/EditGoals';
 
 import './App.css';
 
@@ -54,6 +55,11 @@ class App extends Component {
               exact
               path="/my_goals"
               component={Goals}
+            />
+            <ProtectedRoute
+              exact
+              path="/my_goals/daily_nutrition_goals"
+              component={EditGoals}
             />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
